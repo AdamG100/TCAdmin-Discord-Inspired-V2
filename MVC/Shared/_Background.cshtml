@@ -1,0 +1,112 @@
+﻿@model TCAdmin.Web.MVC.Models.Shared.BackgroundModel
+
+@{
+    var isdark = bool.Parse(this.GetTemplateSetting("CustomTheme.Dark", "False"));
+    var coloredsidebar = bool.Parse(this.GetTemplateSetting("CustomTheme.PrimaryColorSideBar", "False"));
+    var bgposition = this.GetTemplateSetting("CustomTheme.Background.Location", "Content");
+    var transparency = this.GetTemplateSetting("CustomTheme.Background.Transparency", "0.85");
+    var primarybgcolor = this.GetTemplateSetting("MVC.Primary.Background.Color");
+    var contentcolor = string.Empty;
+    var sidebarcolor = string.Empty;
+
+    if (string.IsNullOrEmpty(primarybgcolor))
+    {
+        if (isdark)
+        {
+            contentcolor = "rgba(0,0,0,0.75)";
+        }
+        else
+        {
+            contentcolor = "rgba(255,255,255,0.75)";
+        }
+
+        sidebarcolor = contentcolor;
+    }
+    else
+    {
+        if (isdark)
+        {
+            contentcolor = string.Format("rgba(32, 34, 37, 0.8)", transparency);
+        }
+        else
+        {
+            contentcolor = string.Format("rgba(32, 34, 37, 0.8)", transparency);
+        }
+
+        if (coloredsidebar)
+        {
+            sidebarcolor = primarybgcolor.Replace("rgb", "rgba").TrimEnd(')') + string.Format(", {0})", transparency);
+        }
+        else
+        {
+            sidebarcolor = contentcolor;
+        }
+    }
+}
+
+    <style>
+    @if (!string.IsNullOrEmpty(Model.BackgroundImage))
+    {
+        switch (bgposition)
+        {
+            case "Both":
+                <text>
+                    body {
+                        background-image: linear-gradient( @contentcolor, @contentcolor ), url(@this.GetTemplateFileUrl(Model.BackgroundImage));
+                        background-size: cover;
+                        background-attachment: fixed;
+                    }
+
+                    @@media only screen and (min-width:901px) {
+                        .primary-color-sidebar .nav-fostrap {
+                            background-image: linear-gradient( @sidebarcolor, @sidebarcolor ), url(@this.GetTemplateFileUrl(Model.BackgroundImage));
+                            background-size: cover;
+                            background-attachment: fixed;
+                        }
+                    }
+                </text>
+                break;
+            case "SideBar":
+                <text>
+                    @@media only screen and (min-width:901px) {
+                        .primary-color-sidebar .nav-fostrap {
+                            background-image: linear-gradient( @sidebarcolor, @sidebarcolor ), url(@this.GetTemplateFileUrl(Model.BackgroundImage));
+                            background-size: cover;
+                            background-attachment: fixed;
+                        }
+                    }
+                </text>
+                break;
+            case "Content":
+                <text>
+                    body {
+                        background-image: linear-gradient( @contentcolor, @contentcolor ), url(@this.GetTemplateFileUrl(Model.BackgroundImage));
+                        background-size: cover;
+                        background-attachment: fixed;
+                    }
+                </text>
+                break;
+        }
+
+        @*if (isdark)
+        {
+        <text>
+            body {
+                background-image: linear-gradient(to top, rgba(0,0,0,0) -500%, rgba(0,0,0,1)), url(@this.GetTemplateFileUrl(Model.BackgroundImage));
+                background-size: cover;
+                background-attachment: fixed;
+            }
+        </text>
+        }
+        else
+        {
+        <text>
+            body {
+                background-image: linear-gradient(to top, rgba(255,255,255,0) -400%, rgba(255,255,255,1)), url(@this.GetTemplateFileUrl(Model.BackgroundImage));
+                background-size: cover;
+                background-attachment: fixed;
+            }
+        </text>
+        }*@
+    }
+    </style>

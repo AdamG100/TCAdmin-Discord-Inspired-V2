@@ -1,0 +1,27 @@
+.Panel {
+    background-color: rgba(32, 34, 37, 0.8);
+    
+}
+
+.Meter {
+    background: #202225;
+    border-color: #202225;
+}
+
+.RadToolBar .rtbWrap:hover {
+    outline: 0;
+    background-color: #5865F2;
+    transition: 0.3s;
+}
+
+.HyperLink, .HyperLinkCommand, .HyperLinkCommand:hover {
+
+    text-decoration: none;
+    color: #dcddde;
+    white-space: nowrap;
+}
+
+.ToolBarPopupPanel {
+    border: 1px solid #202225;
+    background-color: #202225;
+}

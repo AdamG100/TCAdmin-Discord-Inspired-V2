@@ -1,0 +1,54 @@
+﻿@using TCAdmin.SDK.Objects
+@using TCAdminOAuth.Configurations
+@using TCAdminOAuth.Models
+
+@{
+    var isOAuthError = Request["OAuthError"] != null;
+}
+
+<script>
+@if (isOAuthError)
+{
+    <text>
+        $(document).ready(function() {
+            TCAdmin.Ajax.ShowBasicDialog('OAuth Login', '@Request["OAuthError"]')
+        });
+    </text>
+} 
+    const recoverSection = document.getElementsByClassName("recover")[0].parentNode;
+    let socialsDiv = document.createElement("div");
+    
+    socialsDiv.innerHTML = `
+    <div class="divider">
+        <strong class="divider-title">or</strong>
+    </div>
+    @try
+    {
+        ObjectBase.GlobalSkipSecurityCheck = true;
+        foreach (var provider in OAuthProvider.GetAll().Where(provider => provider.Configuration.Parse<OAuthProviderConfiguration>().Enabled))
+        {
+            if(provider.Name == "Whmcs")
+                {
+                    <div class="btn-group" role="group">
+                        <a href="/OAuth/Login/@provider.Id">
+                           <button type="button" class="btn btn-@provider.Name" data-toggle="tooltip" data-placement="bottom" title="Sign in with @provider.Name" ><span class="fab fa-@(provider.Name.ToLower())"></span></button>
+                        </a>
+                    </div>
+
+                    continue;
+                }
+                    <div class="btn-group" role="group">
+                        <a href="/OAuth/Login/@provider.Id">
+                            <button type="button" class="btn btn-@provider.Name" data-toggle="tooltip" data-placement="bottom" title="Sign in with @provider.Name" ><span class="fab fa-@(provider.Name.ToLower())"></span></button>
+                        </a>
+                    </div>
+        }
+    }
+    finally
+    {
+        ObjectBase.GlobalSkipSecurityCheck = false;
+    }
+
+    `
+    recoverSection.append(socialsDiv);
+</script>

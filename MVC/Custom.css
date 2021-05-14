@@ -1,0 +1,204 @@
+.nav-fostrap {
+    background-color: #202225;
+
+    
+}
+
+.nav-fostrap li ul.dropdown {
+    background-color: #2f3136;
+    border-color: #2f3136;
+}
+
+.nav-fostrap li ul.dropdown li:hover {
+    background-color: rgb(88, 101, 242);
+    transition: 0.3s;
+}
+
+#header {
+    background-color: #202225;
+}
+
+a:link, a:visited {
+    color: #dcddde;
+}
+
+#sidebar fieldset:first-of-type legend {
+    background-color: #202225;
+    color: #dcddde;
+}
+
+#main .header-text {
+    background-color: #202225;
+    color: #dcddde;
+}
+
+.k-progressbar-horizontal {
+    width: 30em;
+    height: 2rem;
+    border-radius: 5px;
+}
+
+.k-progressbar {
+    color: #dcddde;
+    background-color: rgba(32, 34, 37, 0.9);
+}
+
+.k-switch-off .k-switch-container {
+    color: #dcddde;
+    background-color: #202225;
+}
+
+.k-switch-off .k-switch-container:hover {
+    color: #dcddde;
+    background-color: #202225;
+}
+
+
+.k-badge-info {
+    border-color: #5865F2;
+    color: #dcddde;
+    background-color: #5865F2;
+}
+
+#sidebar > .links a:hover {
+    background-color: #5865F2;
+    border: 1px solid #5865F2;
+    transition: 0.3s;
+}
+
+.k-breadcrumb .k-breadcrumb-link {
+    color: #dcddde;
+
+}
+
+.k-breadcrumb .k-breadcrumb-link:hover, .k-breadcrumb .k-breadcrumb-link.k-state-hover {
+    color: #dcddde;
+    background-color: #5865F2;
+}
+
+.k-breadcrumb .k-breadcrumb-root-link:hover, .k-breadcrumb .k-breadcrumb-root-link.k-state-hover {
+    background-color: #5865F2;
+}
+
+.green-button, .orange-button, .red-button {
+    background-color: #5865F2;
+    color: #dcddde;
+    border-color: #5865F2;
+    background-image: unset;
+}
+
+.green-button:hover, .orange-button:hover, .red-button:hover{
+    background-color: #3544ef;
+    color: #dcddde;
+    border-color: #3544ef;
+    background-image: unset;
+}
+
+.k-button {
+    border-color: #5865F2;
+    color: #dcddde;
+    background-color: #5865F2;
+}
+
+.k-toolbar {
+    border-color: #2f3136;
+}
+
+.k-card, .k-card-header {
+    border-color: #2f3136;
+    color: #dcddde;
+    background-color: #202225;
+}
+
+.k-flat {
+    color: #dcddde !important;
+}
+
+.k-flat:hover{
+    border-color: #5865F2 !important;
+    color: #dcddde !important;
+    background-color: #5865F2 !important;
+    transition: 0.3s !important;
+}
+
+.k-tabstrip-items .k-item:hover, .k-tabstrip-items .k-item.k-state-hover {
+    border-color: #5865F2;
+    color: #dcddde;
+    transition: 0.3s;
+}
+
+#reinstallButton {
+    margin-bottom: 15px;
+}
+
+textarea:hover, textarea:focus {
+    background-color: rgba(0, 0, 0, 0.08) !important;
+    border: 1px solid #5865F2 !important;
+    transition: 0.3s;
+}
+
+.k-textbox:focus, .k-textbox.k-state-focus, .k-textbox.k-state-focused, .k-textarea:focus, .k-textarea.k-state-focus, .k-textarea.k-state-focused, .k-numerictextbox:focus {
+    border-color: #5865F2;
+    color: #dcddde;
+    background-color: #2f3136;
+    box-shadow: none !important;
+    transition: 0.3s;
+}
+
+.k-textbox:hover, .k-textbox.k-state-hover, .k-textarea:hover, .k-textarea.k-state-hover {
+    border-color: #5865F2;
+    color: #dcddde;
+    background-color: rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+.k-i-save:before {
+    color: #dcddde;
+}
+
+.k-i-cancel:before {
+    color: #dcddde;
+}
+
+.k-i-upload:before {
+    color: #dcddde !important;
+}
+
+.k-i-folder-add:before {
+    color: #dcddde !important;
+}
+
+.k-window-titlebar .k-window-actions {
+    padding-top: 13px;
+}
+
+.k-upload .k-dropzone .k-upload-status, .k-upload .k-dropzone .k-dropzone-hint{
+    color: #dcddde !important;
+}
+
+.k-file-size {
+    color: #dcddde !important;
+}
+
+.k-upload .k-file-progress .k-progress {
+    background-color: #5865F2;
+}
+
+#dbAllowinner, #dbLocationsinner, #dbConfig, #dbManage {
+    color: #dcddde !important;
+}
+
+.k-switch-off .k-switch-handle {
+    background-color: #5865F2;
+    border-color: #5865F2;
+}
+
+.k-switch-off .k-switch-container {
+    border-color: #202225;
+    background-color: #2f3136;
+}
+
+.k-breadcrumb-root-link:hover, .k-breadcrumb-root-link.k-state-hover, .k-breadcrumb-link:hover {
+    color: #dcddde;
+    text-decoration: none !important;
+}
