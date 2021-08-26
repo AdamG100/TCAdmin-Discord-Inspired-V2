@@ -2,7 +2,7 @@
 /* If your theme uses a different css make a copy of this file and place it in your theme's folder                     */
 HTML,
 BODY {
-    background-color: rgb(47, 49, 54);
+    background-color: 0;
     color: rgb(220, 221, 222);
 }
 
@@ -148,7 +148,7 @@ a:active, a:hover {
 @media only screen and (max-width:900px) {
     .nav-fostrap,
     .nav-bg-fostrap {
-        background-color: rgb(47, 49, 54);
+        background-color: 0;
     }
 
         .nav-bg-fostrap .title-mobile {
@@ -157,6 +157,6 @@ a:active, a:hover {
 
     #sidebar ul,
     #sidebar {
-        background-color: rgb(47, 49, 54);
+        background-color: 0;
     }
 }
