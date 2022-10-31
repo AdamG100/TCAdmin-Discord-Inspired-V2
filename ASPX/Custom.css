@@ -21,6 +21,25 @@ option:focus, option:hover, select:focus, select:hover, textarea:focus, textarea
     border: solid 1px #23272A !important;
 }
 
+/* .RadGrid_TCAdmin .rgNumPart a {
+    border: 1px solid rgb(1, 26, 98);
+    line-height: 20px;
+    color: #fff;
+} */
+
+/* .RadGrid_TCAdmin .rgNumPart a.rgCurrentPage, .RadGrid_TCAdmin .rgNumPart a.rgCurrentPage:hover {
+    border-color: rgb(2, 16, 56);
+    background: rgb(2, 16, 56);
+    color: #fff;
+} */
+
+/* .RadGrid_TCAdmin .rgNumPart a:hover {
+    border-color: rgb(2, 16, 56);
+    background: rgb(2, 16, 56);
+    color: #fff;
+    transition: 0.3s;
+} */
+
 .WorkshopActionContainer div:first-child .NotInstalled {
     background-color: #202225; 
     border-bottom-left-radius: 10px;
@@ -76,14 +95,19 @@ option:focus, option:hover, select:focus, select:hover, textarea:focus, textarea
 }
 
 .RadDock_TCAdmin fieldset .rdMiddle .rdCenter, .RadDock_TCAdmin .rdBottom .rdCenter {
-    background-color: #202225;
-    border: 0.09em solid #202225;
+    background-color: #202225;;;
+    border: 0.09em solid #202225;;;
 }
 
 .RadDock_TCAdmin .rdContent {
     color: rgb(248, 249, 250);
-    background-color: #202225;
+    background-color: #202225;;;
 }
+
+/* .RadToolBarDropDown .rtbWrap {
+    background-color: rgb(1, 26, 98);
+    border-color: rgb(1, 26, 98);
+} */
 
 .ToolBarPopupPanel {
     left: 0;
